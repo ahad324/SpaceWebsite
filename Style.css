@@ -68,6 +68,7 @@ body {
   align-items: center;
   padding: 2%;
   margin: auto;
+  z-index:999;
 }
 
 .main .navbar .links {

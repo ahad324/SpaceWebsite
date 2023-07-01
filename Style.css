@@ -78,9 +78,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.main .navbar .logo{
-  padding: 1%;
-}
+
 .main .navbar .links {
   width: 50%;
   height: 10vh;
@@ -91,7 +89,6 @@ body {
   text-transform: uppercase;
   backdrop-filter: blur(25px);
   border-radius: 1px;
-  padding: 1%;
 }
 .main .navbar .links::before {
   content: '';
@@ -164,7 +161,12 @@ body {
     background: none;
     backdrop-filter: blur(0px);
   }
-
+  .main .navbar .links{
+    padding: 1%;
+  }
+  .main .navbar .logo{
+    padding: 1%;
+  }
   .main .navbar.active {
     background: black;
   }

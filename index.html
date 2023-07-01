@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="Style.css">
 
-  <title>Frontend Mentor | Space tourism website</title>
+  <title>Space tourism website | Home</title>
 </head>
 
 <body>
@@ -20,10 +20,10 @@
       </span>
       <span class="links">
         <ul>
-          <li><a href="" class="active"> 00 Home </a></li>
-          <li><a href=""> 01 Destination </a></li>
-          <li><a href=""> 02 Crew </a></li>
-          <li><a href=""> 03 Technology </a></li>
+          <li><a href="index.html" class="active"><i>00</i> Home </a></li>
+          <li><a href="Destination.html"> <i>01</i> Destination </a></li>
+          <li><a href=""> <i>02</i> Crew </a></li>
+          <li><a href=""> <i>03</i> Technology </a></li>
         </ul>
         <input type="checkbox" id="toggler">
         <label class="menu-btn" for="toggler">
@@ -59,8 +59,6 @@
 <style>
   body {
     background-image: url(background-home-desktop.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .Home {
@@ -77,11 +75,10 @@
 
   .Home .text p:nth-child(1) {
     text-transform: uppercase;
-
   }
 
   .Home .text p {
-    color: lightgrey;
+    color: var(---text-clr);
     font-weight: 100;
     font-size: 1.5rem;
     margin: 24px 3px;

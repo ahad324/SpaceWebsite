@@ -5,3 +5,10 @@ document.querySelector('.navbar .menu-btn').addEventListener('click', () => {
         e.classList.toggle("active")
     })
 })
+document.addEventListener("scroll",()=>{
+    if(this.scrollY > 20){
+        document.querySelector('.navbar').classList.add("active")
+    }else{
+        document.querySelector('.navbar').classList.remove("active")
+    }
+})

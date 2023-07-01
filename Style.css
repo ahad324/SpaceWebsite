@@ -6,11 +6,15 @@
   margin: 0;
 
 }
-
+:root{
+  ---text-clr:rgb(255, 255, 255, 0.8);
+}
 body {
   min-height: 100vh;
   color: white;
   font-family: 'Exo';
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .navbar .menu-btn {
@@ -68,7 +72,7 @@ body {
   align-items: center;
   padding: 2%;
   margin: auto;
-  z-index:999;
+  z-index: 999;
 }
 
 .main .navbar .links {
@@ -79,7 +83,7 @@ body {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(25px);
   border-radius: 1px;
 }
 
@@ -106,7 +110,14 @@ body {
 
 .main .navbar .links ul li a {
   text-decoration: none;
+  color: var(---text-clr);
+}
+
+.main .navbar .links ul li a i {
   color: white;
+  font-weight: 900;
+  font-style: normal;
+  margin: 5px;
 }
 
 .main .navbar .links ul li a::after {

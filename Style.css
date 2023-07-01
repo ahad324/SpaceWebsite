@@ -14,6 +14,8 @@ body {
   color: white;
   font-family: 'Exo';
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navbar .menu-btn {

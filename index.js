@@ -31,6 +31,4 @@ btn.forEach(element => {
 // Pre-Loader
 window.onload = function () {
     document.querySelector('.loader-bg').style.display = 'none';
-    document.querySelector('body').style.display = 'block';
-
 }

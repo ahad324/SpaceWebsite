@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="Style.css">
+    <title>Space tourism website | Technology</title>
+</head>
+
+<body>
+    <section class="main">
+        <nav class="navbar">
+            <span class="logo">
+                <img src="./assets/shared/logo.svg" alt="">
+            </span>
+            <span class="links">
+                <ul>
+                    <li><a href="index.html"><i>00 </i> Home </a></li>
+                    <li><a href="Destination.html"> <i>01 </i> Destination </a></li>
+                    <li><a href="Crew.html"> <i>02 </i> Crew </a></li>
+                    <li><a href="Technology.html" class="active"> <i>03 </i> Technology </a></li>
+                </ul>
+                <input type="checkbox" id="toggler">
+                <label class="menu-btn" for="toggler">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </label>
+            </span>
+        </nav>
+
+        <div class="Technology">
+            <div class="heading">
+                <h2><span>03</span>Space launch 101</h2>
+            </div>
+            <div class="data">
+                <div class="navigations">
+                    <span id="launchbtn" class="btn active">1</span>
+                    <span id="Spaceportbtn" class="btn">2</span>
+                    <span id="capsulebtn" class="btn">3</span>
+                </div>
+                <div class="info">
+                    <div class="launch sections">
+                        <div class="text">
+                            <span>The terminology...</span>
+                            <span>Launch vehicle</span>
+                            <p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a
+                                payload from Earth's surface to space, usually to Earth orbit or beyond. Our
+                                WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
+                                it's quite an awe-inspiring sight on the launch pad!
+                            </p>
+
+                        </div>
+                        <div class="image"><img src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="Spaceport sections">
+                        <div class="text">
+                            <span>The terminology...</span>
+                            <span>Spaceport</span>
+                            <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft,
+                                by analogy to the seaport for ships or airport for aircraft. Based in the
+                                famous Cape Canaveral, our spaceport is ideally situated to take advantage
+                                of the Earth’s rotation for launch.
+                            </p>
+                        </div>
+                        <div class="image"><img src="./assets/technology/image-spaceport-portrait.jpg" alt=""></div>
+                    </div>
+                    <div class="capsule sections">
+                        <div class="text">
+                            <span>The terminology...</span>
+                            <span>Space capsule</span>
+                            <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry
+                                capsule to reenter the Earth's atmosphere without wings. Our capsule is where
+                                you'll spend your time during the flight. It includes a space gym, cinema,
+                                and plenty of other activities to keep you entertained.
+                            </p>
+                        </div>
+                        <div class="image"><img src="./assets/technology/image-space-capsule-portrait.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script>
+        var launchbtn = document.getElementById('launchbtn');
+        var launch = document.querySelector('.data .info .launch');
+        launchbtn.addEventListener("click", () => {
+            [Spaceport, capsule].forEach((e) => {
+                e.style.display = 'none'
+            })
+            launch.style.display = 'flex';
+        })
+
+        var Spaceportbtn = document.getElementById('Spaceportbtn');
+        var Spaceport = document.querySelector('.data .info .Spaceport');
+        Spaceportbtn.addEventListener("click", () => {
+            [launch, capsule].forEach((e) => {
+                e.style.display = 'none'
+            })
+            Spaceport.style.display = 'flex';
+        })
+
+        var capsulebtn = document.getElementById('capsulebtn');
+        var capsule = document.querySelector('.data .info .capsule');
+        capsulebtn.addEventListener("click", () => {
+            [Spaceport, launch].forEach((e) => {
+                e.style.display = 'none'
+            })
+            capsule.style.display = 'flex';
+        })
+
+    </script>
+</body>
+
+</html>
+<style>
+    body {
+        background-image: url(./assets/technology/background-technology-desktop.jpg);
+    }
+    .navigations {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 5%;
+    }
+    .navigations span {
+        width: 60px;
+        height: 60px;
+        background: none;
+        border: 1px solid #686262;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 60% 0% 0% 0%;
+        font-size: 1.5rem;
+    }
+    .btn.active {
+        background: white;
+        color: black;
+    }
+    .data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info {
+        width: 95%;
+    }
+    .sections {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .sections .text,
+    .sections .image {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sections .text {
+        padding: 20% 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sections .image img {
+        width: 100%;
+    }
+    .sections .text span:nth-child(1) {
+        color: var(---text-clr);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .sections .text span:nth-child(2) {
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin: 5% 0;
+    }
+    .sections .text p:nth-child(3) {
+        font-size: 1.2rem;
+        color: var(---text-clr);
+    }
+    .Spaceport,
+    .capsule {
+        display: none;
+    }
+
+    @media (max-width:768px) {
+        body {
+            background-image: url(./assets/technology/background-technology-tablet.jpg);
+        }
+
+        .sections {
+            flex-direction: column-reverse;
+        }
+
+        .sections .text,
+        .sections .image {
+            width: 100%;
+        }
+
+        .data {
+            flex-direction: column;
+        }
+
+        .navigations {
+            width: 100%;
+            flex-direction: row;
+
+            justify-content: space-evenly;
+        }
+
+        .navigations .btn {
+            margin: 5% 2%;
+        }
+
+        .sections .text {
+            padding: 8% 1%;
+        }
+    }
+
+    @media (max-width:500px) {
+        body {
+            background-image: url(./assets/technology/background-technology-mobile.jpg);
+        }
+
+        .Technology {
+            padding: 50% 0;
+        }
+
+        .data {
+            flex-direction: column;
+        }
+
+        .navigations .btn {
+            margin: 10% 0%;
+        }
+
+        .sections .text,
+        .sections .image {
+            width: 100%;
+        }
+
+        .sections .image img {
+            width: 90%;
+        }
+    }
+</style>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="Style.css">
+    <title>Space tourism website | Crew</title>
+</head>
+
+<body>
+    <section class="main">
+
+        <nav class="navbar">
+            <span class="logo">
+                <img src="./assets/shared/logo.svg" alt="">
+            </span>
+            <span class="links">
+                <ul>
+                    <li><a href="index.html"><i>00 </i> Home </a></li>
+                    <li><a href="Destination.html"> <i>01 </i> Destination </a></li>
+                    <li><a href="Crew.html" class="active"> <i>02 </i> Crew </a></li>
+                    <li><a href="Technology.html"> <i>03 </i> Technology </a></li>
+                </ul>
+                <input type="checkbox" id="toggler">
+                <label class="menu-btn" for="toggler">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </label>
+            </span>
+        </nav>
+
+
+
+        <div class="Crew">
+            <div class="heading">
+                <h2><span>02</span>Meet your crew</h2>
+            </div>
+            <div class="All-data">
+                <div class="data">
+                    <div class="sections" id="engineer">
+                        <div class="info">
+                            <div class="text">
+                                <span>Flight Engineer</span>
+                                <span>Anousheh Ansari</span>
+                                <p> Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems.
+                                    Ansari was the fourth self-funded space tourist, the first self-funded woman to
+                                    fly to the ISS, and the first Iranian in space. </p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./assets/crew/image-anousheh-ansari.webp" alt="engineer">
+                        </div>
+                    </div>
+                    <div class="sections" id="commander">
+                        <div class="info">
+                            <div class="text">
+                                <span>Commander</span>
+                                <span>Douglas Hurley</span>
+                                <p> Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+                                    and former NASA astronaut. He launched into space for the third time as
+                                    commander of Crew Dragon Demo-2. </p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./assets/crew/image-douglas-hurley.webp" alt="commander">
+                        </div>
+                    </div>
+                    <div class="sections" id="pilot">
+                        <div class="info">
+                            <div class="text">
+                                <span> Mission Specialist</span>
+                                <span>Mark Shuttleworth</span>
+                                <p> Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind
+                                    the Linux-based Ubuntu operating system. Shuttleworth became the first South
+                                    African to travel to space as a space tourist. </p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./assets/crew/image-mark-shuttleworth.webp" alt="pilot">
+                        </div>
+                    </div>
+                    <div class="sections" id="specialist">
+                        <div class="info">
+                            <div class="text">
+                                <span> Pilot </span>
+                                <span>Victor Glover</span>
+                                <p> Pilot on the first operational flight of the SpaceX Crew Dragon to the
+                                    International Space Station. Glover is a commander in the U.S. Navy where
+                                    he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+                                    station systems flight engineer. </p>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./assets/crew/image-victor-glover.webp" alt="crew">
+                        </div>
+                    </div>
+                </div>
+                <div class="navigations">
+                    <div class="engineer-btn btn active"><span></span></div>
+                    <div class="commander-btn btn"><span></span></div>
+                    <div class="pilot-btn btn"><span></span></div>
+                    <div class="specialist-btn btn"><span></span></div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script>
+        var enginbtn = document.querySelector('.All-data .navigations .engineer-btn');
+        var engineer = document.getElementById('engineer');
+
+        var commandbtn = document.querySelector('.All-data .navigations .commander-btn');
+        var commander = document.getElementById('commander');
+
+        var pilotbtn = document.querySelector('.All-data .navigations .pilot-btn');
+        var pilot = document.getElementById('pilot');
+
+        var specialistbtn = document.querySelector('.All-data .navigations .specialist-btn');
+        var specialist = document.getElementById('specialist');
+
+        enginbtn.addEventListener("click", (e) => {
+            [commander, pilot, specialist].forEach((e) => {
+                e.style.display = 'none'
+            })
+            engineer.style.display = 'flex';
+        })
+        commandbtn.addEventListener("click", (e) => {
+            [engineer, pilot, specialist].forEach((e) => {
+                e.style.display = 'none'
+            })
+            commander.style.display = 'flex';
+        })
+        pilotbtn.addEventListener("click", (e) => {
+            [engineer, commander, specialist].forEach((e) => {
+                e.style.display = 'none'
+            })
+            pilot.style.display = 'flex';
+        })
+        specialistbtn.addEventListener("click", (e) => {
+            [engineer, commander, pilot].forEach((e) => {
+                e.style.display = 'none'
+            })
+            specialist.style.display = 'flex';
+        })
+    </script>
+</body>
+
+</html>
+<style>
+    body {
+        background-image: url(./assets/crew/background-crew-desktop.jpg);
+    }
+
+    .navigations {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        align-items: center;
+    }
+
+    .btn {
+        width: 15px;
+        height: 15px;
+        border: 1px solid #686262;;
+        background: none;
+        border-radius: 100px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .btn.active {
+        background: white;
+    }
+
+    .sections {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sections .info,
+    .image {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sections .image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sections .info {
+        padding: 14% 0;
+        font-size: 1.22rem;
+    }
+
+    .sections .info .text {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .sections .info .text span:nth-child(1) {
+        color: darkgrey;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 2% 0;
+    }
+
+    .sections .info .text span:nth-child(2) {
+        color: white;
+        text-transform: uppercase;
+        font-size: 4rem;
+        margin: 2% 0;
+    }
+
+    .sections .info .text p:nth-child(3) {
+        color: var(---text-clr);
+        margin: 2% 0;
+        font-size: 2rem;
+    }
+
+    #commander,
+    #pilot,
+    #specialist {
+        display: none;
+    }
+
+    @media (max-width:1150px) {
+        .sections .info .text p:nth-child(3) {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width:768px) {
+        body{
+            background-image: url(./assets/crew/background-crew-tablet.jpg);
+        }
+        .sections {
+            flex-direction: column;
+        }
+
+        .sections .info,
+        .image {
+            width: 100%;
+        }
+
+        .navigations {
+            margin-top: 20%;
+            width: 100%;
+        }
+
+        .sections .info .text span:nth-child(2) {
+            font-size: 3.2rem;
+        }
+
+    }
+
+    @media (max-width:500px) {
+        body{
+            background-image: url(./assets/crew/background-crew-mobile.jpg);
+        }
+        .Crew {
+            padding: 50% 5%;
+        }
+        .Crew .heading {
+            font-size: 1.3rem;
+        }
+    }
+</style>

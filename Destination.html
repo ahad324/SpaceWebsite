@@ -297,13 +297,19 @@
         flex-direction: column;
         justify-content: space-evenly;
     }
-
-    .sections .desc .image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .sections .image img {
+        animation: img 3s linear infinite;
     }
 
+    @keyframes img {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
     .sections .desc .img-title {
         font-size: 8rem;
         font-weight: bold;

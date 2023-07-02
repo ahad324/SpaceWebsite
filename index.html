@@ -16,7 +16,7 @@
 
     <nav class="navbar">
       <span class="logo">
-        <img src="./assets/shared/logo.svg" alt="">
+        <img src="logo.svg" alt="">
       </span>
       <span class="links">
         <ul>
@@ -57,7 +57,7 @@
 <!-- Styling -->
 <style>
   body {
-    background-image: url(./assets/home/background-home-desktop.jpg);
+    background-image: url(background-home-desktop.jpg);
   }
 
   .Home {
@@ -113,7 +113,7 @@
   /* Responsive Media Queries */
   @media (max-width:768px) {
     body {
-      background-image: url(./assets/home/background-home-tablet.jpg);
+      background-image: url(background-home-tablet.jpg);
     }
 
     .Home {
@@ -136,6 +136,9 @@
   }
 
   @media (max-width:500px) {
+     body {
+      background-image: url(background-home-mobile.jpg);
+    }
     .Home {
       padding: 30% 0;
     }
@@ -149,8 +152,6 @@
       font-size: 5rem;
     }
 
-    body {
-      background-image: url(./assets/home/background-home-mobile.jpg);
-    }
+
   }
 </style>
